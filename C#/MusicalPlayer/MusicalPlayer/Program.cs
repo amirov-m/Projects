@@ -16,7 +16,7 @@ namespace MusicalPlayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MusicalPlayerForm());
+            Application.Run(new PlayerForm());
         }
     }
 }
