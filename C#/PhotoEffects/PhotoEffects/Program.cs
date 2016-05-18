@@ -16,13 +16,13 @@ namespace PhotoEffects
             var curPath = Directory.GetCurrentDirectory();
             Console.WriteLine(curPath);
 
-            string fileName = "dog.jpg";
+            string fileName = "greyscale_dog.jpg";
             string imagePath = "../../" + fileName;
             Bitmap bitmap = new Bitmap(Image.FromFile(imagePath));
 
-            var resultBitmap = new GreyscaleEffect().Apply(bitmap);
+            var resultBitmap = new NegativeEffect().Apply(bitmap);
 
-            resultBitmap.Save("../../greyscale_dog.jpg");
+            resultBitmap.Save("../../monochrome_negative_dog.jpg");
         }
     }
 }

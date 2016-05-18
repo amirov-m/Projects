@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Effects\GreyscaleEffect.cs" />
     <Compile Include="Effects\IPhotoEffect.cs" />
+    <Compile Include="Effects\NegativeEffect.cs" />
     <Compile Include="PictureIOHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
