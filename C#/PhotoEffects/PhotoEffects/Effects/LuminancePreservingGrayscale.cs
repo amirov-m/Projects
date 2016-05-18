@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PhotoEffects.Effects
 {
-    class GreyscaleEffect
+    class LuminancePreservingGrayscale
     {
         private Color MakeGreyscale(Color color)
         {
-            int sum = color.R + color.G + color.B;
-            return Color.FromArgb(sum/3, sum/3, sum/3);
+            double gamma = 0.2126*color.R + 0.7152*color.G + 0.0722*color.B;
+            return Color.FromArgb((int) gamma, (int) gamma , (int) gamma);
         }
 
         public Bitmap Apply(Bitmap inputBitmap)
