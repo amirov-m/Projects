@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Effects\AbstractEffect.cs" />
     <Compile Include="Effects\GreyscaleEffect.cs" />
     <Compile Include="Effects\IPhotoEffect.cs" />
     <Compile Include="PictureIOHandler.cs" />
