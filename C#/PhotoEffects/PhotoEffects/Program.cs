@@ -16,13 +16,15 @@ namespace PhotoEffects
             var curPath = Directory.GetCurrentDirectory();
             Console.WriteLine(curPath);
 
-            string fileName = "dog.jpg";
-            string imagePath = "../../" + fileName;
-            Bitmap bitmap = new Bitmap(Image.FromFile(imagePath));
+            string effectName = "OtsuBinarization";
+            string fileName = "adPaper.jpg";
+            string imageDir = "../../Images/AdPaper/";
+            string inputFilePath = imageDir + fileName;
+            string outputFilePath = imageDir + effectName + "_" + fileName;
 
-            var resultBitmap = new GreyscaleEffect().Apply(bitmap);
-
-            resultBitmap.Save("../../greyscale_dog.jpg");
+            Bitmap bitmap = new Bitmap(Image.FromFile(inputFilePath));
+            var resultBitmap = new OtsuBinarization().Apply(bitmap);
+            resultBitmap.Save(outputFilePath);
         }
     }
 }

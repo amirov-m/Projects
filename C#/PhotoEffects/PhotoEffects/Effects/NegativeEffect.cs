@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PhotoEffects.Effects
 {
-    class GreyscaleEffect : IPhotoEffect
+    class NegativeEffect
     {
-        private Color MakeGreyscale(Color color)
+
+        private Color MakeNegative(Color color)
         {
-            int sum = color.R + color.G + color.B;
-            return Color.FromArgb(sum/3, sum/3, sum/3);
+            return Color.FromArgb(255 - color.R, 255 - color.G, 255 - color.B);
         }
 
         public Bitmap Apply(Bitmap inputBitmap)
@@ -23,7 +22,7 @@ namespace PhotoEffects.Effects
             {
                 for (int j = 0; j < inputBitmap.Width; j++)
                 {
-                    resultBitmap.SetPixel(j, i, MakeGreyscale(inputBitmap.GetPixel(j, i)));
+                    resultBitmap.SetPixel(j, i, MakeNegative(inputBitmap.GetPixel(j, i)));
                 }
             }
             return resultBitmap;

@@ -45,9 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Effects\AbstractEffect.cs" />
     <Compile Include="Effects\GreyscaleEffect.cs" />
+=======
+    <Compile Include="Effects\LuminancePreservingGrayscale.cs" />
+    <Compile Include="Effects\OtsuBinarization.cs" />
+    <Compile Include="Effects\SimpleGrayscale.cs" />
+>>>>>>> a5328cdd30b845dc40185ab49419e802e72fa33e
     <Compile Include="Effects\IPhotoEffect.cs" />
+    <Compile Include="Effects\NegativeEffect.cs" />
     <Compile Include="PictureIOHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
